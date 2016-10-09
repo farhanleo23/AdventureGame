@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 enum Story: String {
     case ReturnTrip
     case TouchDown
@@ -83,6 +84,8 @@ extension Page {
         return page
     }
 }
+
+
 
 struct Adventure {
     static var story: Page {

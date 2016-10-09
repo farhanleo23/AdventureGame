@@ -22,6 +22,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "startAdventure" {
+            if let PageController = segue.destination as? PageController {
+                PageController.page = Adventure.story
+            }
+        }
+    }
 
 }
 

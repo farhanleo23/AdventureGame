@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4hF-tY-L8t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2338c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4hF-tY-L8t">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -22,7 +22,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysR-3M-W0Q">
                                 <state key="normal" title="Start Adventure"/>
                                 <connections>
-                                    <segue destination="VEi-Y0-MdI" kind="show" id="egT-0a-sSN"/>
+                                    <segue destination="VEi-Y0-MdI" kind="show" identifier="startAdventure" id="egT-0a-sSN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="1068" y="-546"/>
         </scene>
-        <!--View Controller-->
+        <!--Page Controller-->
         <scene sceneID="fbw-wD-0Ez">
             <objects>
-                <viewController id="VEi-Y0-MdI" sceneMemberID="viewController">
+                <viewController id="VEi-Y0-MdI" customClass="PageController" customModule="InteractiveStory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vb4-Py-0VF"/>
                         <viewControllerLayoutGuide type="bottom" id="lGC-cR-3g1"/>

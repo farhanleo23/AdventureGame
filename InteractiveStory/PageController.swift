@@ -108,6 +108,8 @@ class PageController: UIViewController {
             let nextPage = firstChoice.page
             let pageController = PageController(page: nextPage)
             
+            playSound(url: nextPage.story.soundEffectURl) // Plays Sound
+            
             navigationController?.pushViewController(pageController, animated: true)
         }
     }
@@ -117,6 +119,7 @@ class PageController: UIViewController {
             let nextPage = secondChoice.page
             let pageController = PageController(page: nextPage)
             
+            playSound(url: nextPage.story.soundEffectURl)
             navigationController?.pushViewController(pageController, animated: true)
             
         }
@@ -124,6 +127,11 @@ class PageController: UIViewController {
     
     func playAgain() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func playSound(url: NSURL) {
+        AudioServicesCreateSystemSoundID(url, &sound) // "&" pointer we using C but its swift 
+        AudioServicesPlaySystemSound(sound)
     }
 }
 

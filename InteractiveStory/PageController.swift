@@ -48,7 +48,7 @@ class PageController: UIViewController {
                 firstChoiceButton.addTarget(self, action: #selector(PageController.loadFirstChoice), for: .touchUpInside)
             } else {
                 firstChoiceButton.setTitle("Play Again", for: .normal)
-                firstChoiceButton.addTarget(self, action: #selector(PageController.playAgain), for: .touchUpInside)
+                firstChoiceButton.addTarget(self, action: #selector(PageController.playAgain), for: .touchUpInside) // FIXME
             }
             
             if let secondChoice = page.secondChoice {
@@ -126,7 +126,7 @@ class PageController: UIViewController {
     }
     
     func playAgain() {
-        navigationController?.popViewController(animated: true)
+        navigationController!.popToRootViewController(animated: true)
     }
     
     func playSound(url: NSURL) {
